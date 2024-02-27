@@ -43,7 +43,7 @@ class Classe implements JsonSerializable {
     function find($nome) {  
         foreach ($this->al as $value) {
             if($value->getNome()== $nome){
-              return $value->toString();  
+              return $value;  
             }
             
         }

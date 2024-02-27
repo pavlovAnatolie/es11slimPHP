@@ -30,7 +30,7 @@ include_once("Alunno.php");
     
         $res=$c->find($args['nome']);
         if(!empty($res)){
-            $response->getBody()->write($res);
+            $response->getBody()->write($res->toString());
         }else{
             $response->getBody()->write("alunno destroied");
         }

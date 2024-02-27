@@ -32,9 +32,9 @@ include_once("Alunno.php");
         $res=$c->find($args['nome']);
 
         if(!empty($res)){
-            $response->getBody()->write("shhhhh");
-        }else{
             $response->getBody()->write(json_encode($res));
+        }else{
+            $response->getBody()->write("shhhhh");
         }
         
         return $response;
