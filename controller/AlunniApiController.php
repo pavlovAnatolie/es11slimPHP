@@ -17,7 +17,7 @@ include_once("Alunno.php");
 
         $response->getBody()->write(json_encode($c));
 
-        return $response;
+        return $response->withHeader('Content-Type','application/json');
     }
 
     function single(Request $request, Response $response, $args){
@@ -37,7 +37,7 @@ include_once("Alunno.php");
             $response->getBody()->write("shhhhh");
         }
         
-        return $response;
+        return $response->withHeader('Content-Type','application/json');
     }
 
 
