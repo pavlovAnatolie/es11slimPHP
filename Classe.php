@@ -1,6 +1,6 @@
 <?php
-
-class Classe{
+include_once("Alunno.php");
+class Classe implements JsonSerializable {
     protected $numero;
     protected $sezione;
     protected $al;
@@ -48,6 +48,14 @@ class Classe{
             
         }
     }
+
+    function jsonSerialize(){
+        return ["numero"=>$this->numero,
+                "sezione"=>$this->sezione,
+                "alunni"=>$this->al];
+    }
+
+
 
 
 }
