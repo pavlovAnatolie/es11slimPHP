@@ -27,7 +27,7 @@ include_once("Alunno.php");
         $a4 = new Alunno("riccardo","grandi",14);
         $al = array($a1, $a2, $a3, $a4);
         $c = new Classe(5,"dia",$al);
-    
+        //metodo find molto comodo
         $res=$c->find($args['nome']);
         if(!empty($res)){
             $response->getBody()->write($res->toString());
